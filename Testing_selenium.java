@@ -15,7 +15,7 @@ public class Testing_selenium {
         driver.manage().window().maximize();
 
         try {
-            // 1) Login
+            
             driver.get("https://www.saucedemo.com");
             driver.findElement(By.id("user-name")).sendKeys("standard_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -23,7 +23,7 @@ public class Testing_selenium {
             Thread.sleep(2000);
             System.out.println("Login berhasil!");
 
-            // 2) Ambil semua <script src>
+            
             List<WebElement> scripts = driver.findElements(By.tagName("script"));
             System.out.println("\n=== File JavaScript dari <script src> ===");
             int i = 1;
@@ -34,7 +34,7 @@ public class Testing_selenium {
                 }
             }
 
-            // 3) Ambil semua <a>
+            
             List<WebElement> links = driver.findElements(By.tagName("a"));
             System.out.println("\n=== Link yang Ditemukan ===");
             int j = 1;
@@ -51,3 +51,4 @@ public class Testing_selenium {
         }
     }
 }
+
